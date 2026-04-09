@@ -8,12 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: Checkout code
-       run: actions/checkhout@v3
+         - name: Checkout code
+           run: actions/checkout@v3
 
-      -name:Build Docker image
-       run: docker build -t app .
+         - name: Build Docker image
+           run: docker build -t app .
 
-       -name: Run Docker Container 
-        run: docker run app
+         - name: Run Docker Container 
+           run: docker run app
         
